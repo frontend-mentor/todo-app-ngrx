@@ -1,8 +1,12 @@
-# TodoAppNgrx
+# Todo app
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.2.
+> The classic todo app with a few twists! This app includes a dark/light theme toggle and drag & drop reordering for anyone wanting an extra test.
+
+![Desktop design screenshot for the Todo app coding challenge](desktop-preview.jpg)
 
 ## Development server
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.2.
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 

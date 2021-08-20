@@ -1,0 +1,9 @@
+<div class="filters-container" [class.dark]="darkMode$ | async">
+  <button
+    *ngFor="let item of supportedFilters"
+    [ngClass]="{ active: (filter$ | async) === item.filter }"
+    (click)="onFilter(item.filter)"
+  >
+    {{ item.label }}
+  </button>
+</div>

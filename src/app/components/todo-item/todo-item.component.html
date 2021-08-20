@@ -1,0 +1,22 @@
+<div class="todo-container" [class.dark]="darkMode$ | async">
+  <app-todo-checkmark [checked]="todo.completed" (click)="onToggleTodo()"></app-todo-checkmark>
+
+  <input
+    #todoTitle
+    class="todo-title"
+    [required]="true"
+    [class.completed]="todo.completed"
+    [(ngModel)]="editableTodoTitle"
+    placeholder="Create a new todo..."
+    (keydown)="onTodoTitleKeyDown($event)"
+    (focus)="todoTitle.select()"
+    (change)="onInputValueChanged()"
+  />
+  <div class="delete-icon">
+    <app-icon-cross
+      size="12"
+      [color]="(darkMode$ | async) ? '#5B5E7E' : '#494C6B'"
+      (click)="onDeleteTodo()"
+    ></app-icon-cross>
+  </div>
+</div>

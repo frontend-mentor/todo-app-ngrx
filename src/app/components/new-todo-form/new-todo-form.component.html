@@ -1,0 +1,4 @@
+<div class="form-container" [class.dark]="darkMode$ | async">
+  <app-todo-checkmark [checked]="false"></app-todo-checkmark>
+  <input class="todo-title" placeholder="Create a new todo..." [(ngModel)]="title" (keydown.enter)="onEnterKey()" />
+</div>

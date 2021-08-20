@@ -1,0 +1,57 @@
+.todo-container {
+  height: 52px;
+  padding: 16px 24px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  border-bottom: 1px solid #e3e4f1;
+}
+
+.todo-title {
+  font: 400 12px/1 'Josefin Sans', sans-serif;
+  letter-spacing: -0.166667px;
+  flex: 1;
+
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.todo-title.completed {
+  color: #4d5067;
+  text-decoration: line-through;
+}
+
+//==================================================
+// Dark mode
+
+.dark.todo-container {
+  background-color: #25273d;
+  border-bottom-color: #393a4b;
+}
+
+.dark .todo-title {
+  color: #c8cbe7;
+}
+
+.dark .todo-title.completed {
+  color: #4d5067;
+}
+
+// Media
+@media all and (min-width: 592px) {
+  .todo-container {
+    height: 64px;
+    gap: 24px;
+  }
+
+  .todo-title {
+    font-size: 18px;
+  }
+
+  .todo-container:not(:hover) .delete-icon {
+    display: none;
+  }
+}

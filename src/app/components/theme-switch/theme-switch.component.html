@@ -1,0 +1,8 @@
+<button
+  class="theme-switch"
+  *ngIf="{ darkMode: darkMode$ | async } as context"
+  (click)="changeTheme(!context.darkMode)"
+>
+  <app-icon-sun *ngIf="context.darkMode"></app-icon-sun>
+  <app-icon-moon *ngIf="!context.darkMode"></app-icon-moon>
+</button>

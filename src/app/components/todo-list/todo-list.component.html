@@ -1,0 +1,12 @@
+<app-new-todo-form></app-new-todo-form>
+
+<div class="items-container" [class.dark]="darkMode$ | async">
+  <div class="scroll-container">
+    <app-todo-item *ngFor="let todo of filteredTodos$ | async" [todo]="todo"></app-todo-item>
+  </div>
+  <app-todo-summary>
+    <app-todo-filters *ngIf="inlineFilterVisible"></app-todo-filters>
+  </app-todo-summary>
+</div>
+
+<div class="drag-hint">Drag and drop to reorder list</div>

@@ -1,0 +1,9 @@
+<div
+  class="container"
+  [ngClass]="{ checked: checked, dark: darkMode$ | async }"
+  [ngStyle]="{ width: size + 'px', height: size + 'px', flexGrow: 0, flexShrink: 0, flexBasis: size }"
+>
+  <div class="inner">
+    <app-icon-check *ngIf="checked"></app-icon-check>
+  </div>
+</div>
